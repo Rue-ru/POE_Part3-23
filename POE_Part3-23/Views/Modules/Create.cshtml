@@ -1,0 +1,73 @@
+﻿@model POE_Part3_23.Models.Modules
+
+@{
+    ViewData["Title"] = "Create";
+}
+<!-- Inside your .cshtml file or layout file -->
+<head>
+    <link rel="stylesheet" href="~/css/styles.css" />
+</head>
+
+
+<h1>Create</h1>
+
+<h4>Modules</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Code" class="control-label"></label>
+                <input asp-for="Code" class="form-control" />
+                <span asp-validation-for="Code" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Credits" class="control-label"></label>
+                <input asp-for="Credits" class="form-control" />
+                <span asp-validation-for="Credits" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClassHours" class="control-label"></label>
+                <input asp-for="ClassHours" class="form-control" />
+                <span asp-validation-for="ClassHours" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SelfStudyHoursPerWeek" class="control-label"></label>
+                <input asp-for="SelfStudyHoursPerWeek" class="form-control" />
+                <span asp-validation-for="SelfStudyHoursPerWeek" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SemWeeks" class="control-label"></label>
+                <input asp-for="SemWeeks" class="form-control" />
+                <span asp-validation-for="SemWeeks" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StartDate" class="control-label"></label>
+                <input asp-for="StartDate" class="form-control" />
+                <span asp-validation-for="StartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PlannedDay" class="control-label"></label>
+                <input asp-for="PlannedDay" class="form-control" />
+                <span asp-validation-for="PlannedDay" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

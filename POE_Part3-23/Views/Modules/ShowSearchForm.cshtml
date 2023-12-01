@@ -1,0 +1,36 @@
+﻿<!-- Inside your .cshtml file or layout file -->
+<head>
+    <link rel="stylesheet" href="~/css/styles.css" />
+</head>
+
+<h4>Search for Modules</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="ShowSearchResult">
+            <div class="form-group">
+                <label for="SearchPhrase" class="control-label"></label>
+                <h6>Module Code</h6>
+                <input name="SearchPhrase" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="SearchPhrase2" class="control-label"></label>
+                <h6>Module Name</h6>
+                <input name="SearchPhrase2"class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="SearchPhrase3" class="control-label"></label>
+                <h6>Start Date</h6>
+                <input name="SearchPhrase3" class="form-control" />
+            </div>
+            </br>
+            <div class="form-group">
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
